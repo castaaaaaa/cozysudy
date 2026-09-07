@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-rounded {
+  font-family: 'Comfortaa', 'Nunito', cursive, sans-serif;
+}
+
+.font-mono-soft {
+  font-family: 'Space Mono', monospace;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px) scaleX(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-16px) scaleX(0.9);
+    opacity: 0;
+  }
+}
+
+.animate-steam {
+  animation: steam 2.6s ease-in-out infinite;
+}
+
+@keyframes gentle-breathe {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-2.5px) scale(1.008);
+  }
+}
+
+.animate-breathe {
+  animation: gentle-breathe 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-16px) translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(520px) translateX(var(--drift, 12px));
+    opacity: 0.15;
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall linear infinite;
+}
+
+@keyframes rainfall-streak {
+  0% {
+    transform: translateY(-20px) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(520px) translateX(-12px);
+    opacity: 0.1;
+  }
+}
+
+.animate-rainfall-streak {
+  animation: rainfall-streak linear infinite;
+}
+
+@keyframes soft-rumble {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 1.5px) rotate(-0.35deg);
+  }
+  40% {
+    transform: translate(2px, -1.5px) rotate(0.35deg);
+  }
+  60% {
+    transform: translate(-1.5px, -1px) rotate(0.2deg);
+  }
+  80% {
+    transform: translate(1.5px, 2px) rotate(-0.2deg);
+  }
+}
+
+.animate-soft-rumble {
+  animation: soft-rumble 0.4s ease-in-out infinite;
+}
+
